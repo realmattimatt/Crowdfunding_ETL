@@ -10,6 +10,7 @@
     2. import numpy as np
     3. pd.set_option('max_colwidth', 400) # Not necessary but suggested for ease of reading
     4. import re # To use regular expressions if needed
+    5. from datetime import datetime as dt
 
 #### How to run:
     1. Install dependancies
