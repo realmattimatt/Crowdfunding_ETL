@@ -11,16 +11,17 @@
     3. pd.set_option('max_colwidth', 400) # Not necessary but suggested for ease of reading
     4. import re # To use regular expressions if needed
     5. from datetime import datetime as dt
+    6. import json
 
 #### How to run:
     1. Install dependancies
-    2. 
+    2. CD to Crowdfunding_ETL/ETL_Mini_Project_MMatti.ipynb and open in Jupyter Notebook.
 
 #### Sources:
     1. Office hours / Class time
     2. https://pandas.pydata.org/docs/
     3. https://numpy.org/doc/stable/user/quickstart.html
-    4. Tutor 
+    4. Tutors: Lucas Manning, 
     5. Xpert Learning Assistant
     6. https://docs.python.org/3/library/re.html
     7. ChatGPT
