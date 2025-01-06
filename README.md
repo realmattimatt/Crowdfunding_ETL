@@ -15,7 +15,7 @@
 
 #### How to run:
     1. Install dependancies
-    2. CD to Crowdfunding_ETL/ETL_Mini_Project_MMatti.ipynb and open in Jupyter Notebook.
+    2. CD to Crowdfunding_ETL/ETL_Mini_Project_MMatti.ipynb and open in Jupyter Notebook or similar resource.
 
 #### Sources:
     1. Office hours / Class time
