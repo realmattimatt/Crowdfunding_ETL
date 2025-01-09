@@ -37,25 +37,43 @@ The Crowdfunding ETL project aims to extract, transform, and load data from crow
 4. Select "Run All" or a similar command
 
 ### Set UP pgAdmin 4 
-1. Open pgAdmin 4 locally
-2. Open a Server and log in
-3. Under Databases, right-click on databases and select "Create" then "Database"
-4. In the Create - Database window, name the database "crowdfunding_db" then save
-5. Open the Query Tool and select the folder containing the schema crowdfunding_db_schema.sql
-6. Execute each query in order
-7. In the left explorer, open the drop-down "Schemas" under the crowdfunding_db database.
-8. Expand "public"
-9. Right-click on "Tables" and select refresh
-10. Inside "Tables," right-click "contacts," select "Import/Export" / Under Options verify Header is ON and Delimiter is set to ",", next use the explorer to open up the "contacts.csv" file.
-11. Repeat "10" for "category," "subcategory," and "campaign" in that order.
+1. Open pgAdmin 4 locally and connect to your server.
+2. Create a new database
+     -  Right-click on Databases and select Create > Database.
+     - Name the database crowdfunding_db and save.
+3. Open the Query Tool and select the folder containing the schema crowdfunding_db_schema.sql
+4. Execute the SQL queries in the schema file sequentially.
+5. In the left explorer, open the drop-down "Schemas" under the crowdfunding_db database.
+6. Expand "public"
+7.  Right-click on "Tables" and select refresh
+
+### Import Data into Tables
+1.  For each table (contacts, category, subcategory, campaign):
+    - Right-click the table and select Import/Export.
+    - Set the following options:
+        - Header: On
+        - Delimiter: ,
+    - Browse to select the appropriate CSV file.
+2.  Import the files in this order:
+       - contacts
+       - category
+       - subcategory
+       - campaign
 
 
-Sources
-Office hours / Class time
-Pandas Documentation
-NumPy Quickstart
-Tutors: Lucas Manning, Carlos Gattorno
-Xpert Learning Assistant
-Python Regular Expressions Documentation
-ChatGPT
-pgAdmin Documentation
+## Sources
+- Office hours / Class time
+- Pandas Documentation
+- NumPy Quickstart
+- Tutors: Lucas Manning, Carlos Gattorno
+- Xpert Learning Assistant
+- Python Regular Expressions Documentation
+- ChatGPT
+- pgAdmin Documentation
+
+## Other notes:
+1. During the merge process about midway in the ETL_Mini_Project_MMatti.ipynb. I also included some verification code to confirm nothing was lost in the merge process like this.
+    - Pre-merge validation to ensure our category and subcategory mappings are complete.
+    The validate='m:1' parameter ensures each campaign maps to exactly one category/subcategory.
+    Using how='left' preserves all campaign records.
+    - Post-merge validation to confirm no data was lost

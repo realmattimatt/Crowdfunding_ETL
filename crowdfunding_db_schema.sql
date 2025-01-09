@@ -41,7 +41,7 @@ CREATE TABLE campaign (
     FOREIGN KEY (category_id) REFERENCES category(category_id) ON DELETE CASCADE,
     FOREIGN KEY (subcategory_id) REFERENCES subcategory(subcategory_id) ON DELETE CASCADE
 );
-
+-- Uncomment as needed below to test. 
 -- SELECT * FROM contacts;
 -- SELECT * FROM category;
 -- SELECT * FROM subcategory;
