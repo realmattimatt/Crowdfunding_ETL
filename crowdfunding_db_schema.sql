@@ -13,13 +13,13 @@ CREATE TABLE contacts (
 CREATE TABLE category (
     category_id VARCHAR(10) PRIMARY KEY NOT NULL,
     category VARCHAR(50) NOT NULL,
-    FOREIGN KEY (category_id) REFERENCES category(category_id) ON DELETE CASCADE
+    FOREIGN KEY (category_id) REFERENCES category(category_id) ON DELETE CASCADE -- I thought I remembered this being needed in lesson ?
 ); -- highlight this entire CREATE TABLE and run 6th
 
 CREATE TABLE subcategory (
     subcategory_id VARCHAR(10) PRIMARY KEY NOT NULL,
     subcategory VARCHAR(50) NOT NULL,
-    FOREIGN KEY (subcategory_id) REFERENCES subcategory(subcategory_id) ON DELETE CASCADE
+    FOREIGN KEY (subcategory_id) REFERENCES subcategory(subcategory_id) ON DELETE CASCADE  -- I thought I remembered this being needed in lesson ?
 ); -- highlight this entire CREATE TABLE and run 7th
 
 CREATE TABLE campaign (
