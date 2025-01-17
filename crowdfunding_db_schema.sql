@@ -1,3 +1,4 @@
+-- Highlight all and run query or, run one at a time as listed
 DROP TABLE IF EXISTS campaign; -- run 1st
 DROP TABLE IF EXISTS subcategory; -- run 2nd
 DROP TABLE IF EXISTS category; -- run 3rd
@@ -8,19 +9,20 @@ CREATE TABLE contacts (
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL
-); -- highlight this entire CREATE TABLE and run 5th
+    -- highlight this entire CREATE TABLE and execite query 5th
+); 
 
 CREATE TABLE category (
     category_id VARCHAR(10) PRIMARY KEY NOT NULL,
-    category VARCHAR(50) NOT NULL,
-    FOREIGN KEY (category_id) REFERENCES category(category_id) ON DELETE CASCADE -- I thought I remembered this being needed in lesson ?
-); -- highlight this entire CREATE TABLE and run 6th
+    category VARCHAR(50) NOT NULL
+    -- highlight this entire CREATE TABLE and execite query 6th
+);  
 
 CREATE TABLE subcategory (
     subcategory_id VARCHAR(10) PRIMARY KEY NOT NULL,
-    subcategory VARCHAR(50) NOT NULL,
-    FOREIGN KEY (subcategory_id) REFERENCES subcategory(subcategory_id) ON DELETE CASCADE  -- I thought I remembered this being needed in lesson ?
-); -- highlight this entire CREATE TABLE and run 7th
+    subcategory VARCHAR(50) NOT NULL
+    -- highlight this entire CREATE TABLE and execite query 7th
+);  
 
 CREATE TABLE campaign (
     cf_id INT PRIMARY KEY NOT NULL,
@@ -40,7 +42,8 @@ CREATE TABLE campaign (
     FOREIGN KEY (contact_id) REFERENCES contacts(contact_id) ON DELETE CASCADE,
     FOREIGN KEY (category_id) REFERENCES category(category_id) ON DELETE CASCADE,
     FOREIGN KEY (subcategory_id) REFERENCES subcategory(subcategory_id) ON DELETE CASCADE
-); -- highlight this entire CREATE TABLE and run 8th
+    -- highlight this entire CREATE TABLE and execite query 8th
+);  
 
 
 -- Uncomment as needed below to test. 
